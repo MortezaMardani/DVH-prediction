@@ -2,7 +2,7 @@ This code aims to predict the differential dose volume hisogram (DVH) from the c
 
 Neural network structure
 
-Input (50x50x11) --> Convolutional-20 filters (5x5x11) --> Avg. pooling (2) --> Convolutional-20 filters (4x4) --> Avg. pooling (2) --> Convolutional-20 filters (3x3) --> Avg. pooling (2) --> Fully connected 25 nodes --> Output-10 nodes
+Input (100x100x11) --> Convolutional-20 filters (5x5x11) --> Avg. pooling (2) --> Convolutional-20 filters (4x4) --> Avg. pooling (2) --> Convolutional-20 filters (3x3) --> Avg. pooling (2) --> Fully connected 25 nodes --> Output-10 nodes
 
 
 There are 110 pateints, and for each patients only the contour slices where one of PTV. Rectum, or Bladder exists. This results in 2835 contour slices. 
@@ -13,7 +13,7 @@ To generate input for each slice the neighboring slices [-5,+5] is considered to
 
 Main function
 
-"oar_diffdvh_crsentropy_prediction_2d_copy.py" 
+"oar_diffdvh_crsentropy_prediction_2d.py" 
 mian function to run
 
 "3D_mat2np.py"
